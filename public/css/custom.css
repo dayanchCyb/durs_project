@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:900&display=swap");
+
+
+.Title {
+    font-family: "Catamaran", sans-serif;
+    color: darkblue;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+
+:hover {
+
+.Title__filled {
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+}
+
+.Title__underline {
+    transform: translateY(-9em);
+}
+
+.Title__highlight {
+    transform: translateY(-2.2em);
+}
+
+}
+}
