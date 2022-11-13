@@ -13,7 +13,7 @@ class ProductController extends Controller
         $products = Product::with(['category', 'brand'])
             ->paginate();
 
-        return view('product.index')
+        return view('home.index')
             ->with([
                 'products' => $products,
             ]);

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ProductController::class)->group(function(){
    Route::get('/', 'index');
-    Route::get('/product/{id}', 'show')->name('product.show')->where('id', '[0-9]+');
+    Route::get('/home/{id}', 'show')->name('home.show')->where('id', '[0-9]+');
 });
 
 
