@@ -16,11 +16,12 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $objs = [
-            'LUX',
-            'Econom',
-            'TMEX',
-            'ASTAR',
-            'DRY-MIXES',
+            'For exterior works',
+            'For interior works',
+            'For ceiling works',
+            'BIRKIM',
+            'DURS',
+            'DURS Ekonym',
         ];
         foreach ($objs as $obj) {
             Category::create([

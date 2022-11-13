@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->cascadeOnDelete();
+            $table->unsignedBigInteger('brand_id')->index();
+            $table->foreign('brand_id')->references('id')->on('brands')->cascadeOnDelete();
             $table->string('name');
-            $table->string('name_ru')->nullable();
-            $table->string('name_en')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->string('created_at');

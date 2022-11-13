@@ -17,10 +17,14 @@
         @foreach($products as $product)
                 <div class="bg-white border rounded p-3">
                     <div class="h3">
-                        {{ $product->category->name }}
+                        {{ $product->brand->name}}
+                    </div>
+                    <div class="h4">
+                        {{ $product->name}}
+
                     </div>
                     <div class="h5">
-                        {{ $product->name }}
+                        {{ $product->category->name }}
                     </div>
                     <div>
                         <img src="{{ asset('storage/img/'.$product->image) }}" alt="" class="img-thumbnail img-thumbnail p-2">
