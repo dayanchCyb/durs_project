@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(ProductController::class)->group(function(){
-   Route::get('/', 'index');
-    Route::get('/home/{id}', 'show')->name('home.show')->where('id', '[0-9]+');
+   Route::get('', 'index');
 });
 
-
+Route::controller(HomeController::class)
+    ->group(function () {
+        Route::get('/locale/{locale}', 'language')->name('language')->where('locale', '[a-z]+');;
+    });
 require __DIR__.'/auth.php';
