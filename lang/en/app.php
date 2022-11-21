@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'app-name' => 'e-commerce',
+    'product-name' => ' ',
     'menu' => 'menu',
+    'contact-button' => 'CONTACT US',
 ];

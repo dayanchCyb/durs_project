@@ -16,4 +16,21 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+
+    public function getName()
+    {
+        $locale = app()->getLocale();
+        switch ($locale) {
+            case 'tm':
+                return $this->name_tm;
+                break;
+            case 'ru':
+                return $this->name_ru;
+                break;
+            case 'en':
+                return $this->name_en;
+                break;
+        }
+    }
+
 }

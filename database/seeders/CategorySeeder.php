@@ -15,17 +15,20 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
+
         $objs = [
-            'For exterior works',
-            'For interior works',
-            'For ceiling works',
-            'BIRKIM',
-            'DURS',
-            'DURS Ekonym',
+            ['daşky işler üçin niýetlenen akril boýagy.', 'для качественного экстерьера', 'for exterior works', ],
+            ['icki işler üçin niýetlenen akril boýagy. ', 'для внутреннего интерьера. ', 'for interior works'],
+            ['potolok işler üçin niýetlenen akril boýagy. ', 'для качественных потолочных работ. ', 'for ceiling works'],
+            ['BIRKIM', 'BIRKIM', 'BIRKIM'],
+            ['DURS', 'DURS', 'DURS'],
         ];
+//
         foreach ($objs as $obj) {
             Category::create([
-                'name' => $obj,
+                'name_tm' => $obj[0],
+                'name_ru' => $obj[1],
+                'name_en' => $obj[2],
             ]);
         }
     }
